@@ -1,0 +1,4 @@
+baseURL = 'https://permisdecyberprudence.fr/'
+languageCode = 'fr-fr'
+title = 'Pour être plus en sécurité sur Internet'
+disableKinds = ['taxonomy']
