@@ -1,4 +1,5 @@
 ---
+id: 7
 question: Tu lis un manga ou tu regardes un animé sur Internet et un contenu choquant apparaît*.
 asterisque: Image violente, effrayante ou à caractère sexuel.
 image: images/800x800-006.png

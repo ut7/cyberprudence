@@ -27,4 +27,27 @@ nav ul {
   .image {
     width: 100%;
   }
+
+  .reponses {
+    list-style: none;
+
+    .choix {
+      display: flex;
+      cursor: pointer;
+
+      input[type=radio] {
+        appearance: none;
+        position: absolute;
+
+        &:checked + .symbol {
+          color: red;
+        }
+      }
+
+      .symbol {
+        width: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
 }

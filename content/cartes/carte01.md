@@ -1,4 +1,5 @@
 ---
+id: 1
 question: Des copains te parlent d’une nouvelle application où tu peux discuter en vidéo avec des personnes au hasard.
 image: images/800x800-000.png
 symboles:

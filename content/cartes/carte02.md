@@ -1,4 +1,5 @@
 ---
+id: 2
 question: Sur Internet, un inconnu te demande si tu as déjà eu une relation amoureuse.
 image: images/800x800-001.png
 symboles:

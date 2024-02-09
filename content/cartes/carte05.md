@@ -1,4 +1,5 @@
 ---
+id: 5
 question: Une amie affiche une personne de ton école ou de ton collège sur les réseaux sociaux en se moquant d’elle.
 image: images/800x800-004.png
 symboles:

@@ -10,15 +10,37 @@
       {{ end }}
       <h2 class="titre">{{ .Params.Question }}</h2>
       <ul class="reponses">
-        {{ $symboles := .Params.Symboles}}
+        {{ $symboles := .Params.Symboles }}
+        {{ $page := .Params.Id }}
         {{ range $i, $reponse := .Params.reponses }}
-          <li>
-            <span>{{ index $symboles $i }}</span>
-            <span>{{ $reponse }}</span>
-          </li>
+        <li>
+          {{ $value := printf "carte_%s_reponse_%s" $page $i}}
+          <label class="choix">
+            <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
+            <div class="symbol {{ index $symboles $i }}">{{ index $symboles $i }}</div>
+            <div class="reponse">{{ $reponse }}</div>
+          </label>
+        </li>
         {{ end }}
       </ul>
     </section>
   {{ end }}
   </ul>
+  <h2>Resultat</h2>
+  <p>Triangles : <span id="nombre_▲"></span></p>
+  <p>Carrés : <span id="nombre_■"></span></p>
+  <p>Losanges : <span id="nombre_◆"></span></p>
+  <p>ronds : <span id="nombre_●"></span></p>
+  <script>
+    window.addEventListener("load", function(){
+      document.querySelectorAll("input[type=radio]").forEach((element) => {
+        element.addEventListener("change", () => {
+          for(const symbole of ["▲", "■", "◆", "●"]) {
+            const count = document.querySelectorAll("input[type=radio]:checked + ." + symbole).length;
+            document.getElementById("nombre_" + symbole).textContent = count;
+          }
+        });
+      })
+     });
+  </script>
 {{ end }}

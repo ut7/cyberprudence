@@ -1,4 +1,5 @@
 ---
+id: 10
 question: Ton youtubeur préféré propose de gagner un super cadeau en participant à un concours ou challenge.
 image: images/800x800-009.png
 symboles:

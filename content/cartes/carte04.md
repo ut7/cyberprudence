@@ -1,4 +1,5 @@
 ---
+id: 4
 question: Si on te propose de gagner de l’argent en envoyant une photo de toi.
 image: images/800x800-003.png
 symboles:

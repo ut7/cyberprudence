@@ -1,4 +1,5 @@
 ---
+id: 8
 question: Tu as publié une vidéo qui a fait beaucoup de vues avec de nombreux commentaires. Comment réagis-tu ?
 image: images/800x800-007.png
 symboles:
