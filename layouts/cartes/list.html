@@ -6,15 +6,15 @@
     <section class="question">
       <div class="numero"></div>
       {{ with resources.GetMatch .Params.Image }}
-      <img class="image" src="{{ .RelPermalink }}">
+        <img class="image" src="{{ .RelPermalink }}">
       {{ end }}
       <h2 class="titre">{{ .Params.Question }}</h2>
       <ul class="reponses">
         {{ $symboles := .Params.Symboles}}
         {{ range $i, $reponse := .Params.reponses }}
           <li>
-            <img src="{{ index $symboles $i }}.jpg" alt="{{ index $symboles $i }}">
-            <p>{{ $reponse }}</p>
+            <span>{{ index $symboles $i }}</span>
+            <span>{{ $reponse }}</span>
           </li>
         {{ end }}
       </ul>

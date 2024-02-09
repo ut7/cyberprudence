@@ -2,10 +2,10 @@
 question: Un jeune avec qui tu discutes et joues sur Internet depuis plus de 6 mois te propose d’échanger vos numéros de téléphone.
 image: images/800x800-008.png
 symboles:
-  - carré
-  - rond
-  - losange
-  - triangle
+  - ■
+  - ●
+  - ◆
+  - ▲
 reponses:
   - Tu proposes à la place ton snap, ton insta, ton discord…
   - Tu refuses et tu lui expliques que tu préfères continuer à lui parler sur le jeu sans donner ton numéro.
