@@ -1,31 +1,41 @@
 {{ define "main" }}
-  <h1>Permis de cyberprudence</h1>
-  <p>Pour être plus en sécurité sur Internet</p>
-  <ul>
+  <section class="couverture">
+    <h1>Permis de cyberprudence</h1>
+    <p>Pour être plus en sécurité sur Internet</p>
+  </section>
+  <ol>
   {{ range .Pages }}
-    <section class="question">
-      <div class="numero"></div>
-      {{ with resources.GetMatch .Params.Image }}
-        <img class="image" src="{{ .RelPermalink }}">
-      {{ end }}
-      <h2 class="titre">{{ .Params.Question }}</h2>
-      <ul class="reponses">
-        {{ $symboles := .Params.Symboles }}
-        {{ $page := .Params.Id }}
-        {{ range $i, $reponse := .Params.reponses }}
-        <li>
-          {{ $value := printf "carte_%s_reponse_%s" $page $i}}
-          <label class="choix">
-            <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
-            <div class="symbol {{ index $symboles $i }}">{{ index $symboles $i }}</div>
-            <div class="reponse">{{ $reponse }}</div>
-          </label>
-        </li>
-        {{ end }}
-      </ul>
-    </section>
+    <li>
+      <section class="carte">
+        <div class="question">
+          <div class="image">
+            {{ with resources.GetMatch .Params.Image }}
+              <img src="{{ .RelPermalink }}">
+            {{ end }}
+          </div>
+          <div class="titre">
+              <div class="numero"></div>
+              <h2>{{ .Params.Question }}</h2>
+          </div>
+        </div>
+        <ul class="reponses">
+          {{ $symboles := .Params.Symboles }}
+          {{ $page := .Params.Id }}
+          {{ range $i, $reponse := .Params.reponses }}
+          <li>
+            {{ $value := printf "carte_%s_reponse_%s" $page $i}}
+            <label class="choix">
+              <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
+              <div class="symbol {{ index $symboles $i }}"><span>{{ index $symboles $i }}</span></div>
+              <div class="reponse">{{ $reponse | markdownify }}</div>
+            </label>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+    </li>
   {{ end }}
-  </ul>
+  </ol>
   <h2>Resultat</h2>
   <p>Triangles : <span id="nombre_▲"></span></p>
   <p>Carrés : <span id="nombre_■"></span></p>

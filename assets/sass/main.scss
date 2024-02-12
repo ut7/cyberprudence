@@ -1,7 +1,21 @@
+@import 'fonts.scss';
+$jaune: #FCBE00;
+$bleu: #243887;
+
 body {
-  width: 400px;
+  max-width: 600px;
   margin: 0 auto;
-  font-family: sans-serif;
+  font-family: Lato;
+  background-color: $bleu;
+  color: white;
+}
+
+ol {
+  counter-reset: compteurQuestion;
+  padding:0;
+  li {
+    list-style-type: none;
+  }
 }
 
 nav ul {
@@ -23,16 +37,66 @@ nav ul {
   }
 }
 
-.question {
-  .image {
-    width: 100%;
+.couverture {
+  h1 {
+    font-family: Terminal-grotesque;
+    text-transform: uppercase;
+    color: white;
+  }
+  p {
+    font-family: VG5000;
+    color: $jaune;
+  }
+}
+
+.carte {
+  border: 1rem solid white;
+  border-radius: 1rem;
+  color: $bleu;
+  background-color: white;
+  margin-top: 1rem;
+
+  .question {
+    .image {
+      display: flex;
+      border-radius: 1rem 1rem 0 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .titre {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: VG5000;
+      font-size: 3rem;
+      background-color: $jaune;
+      padding-right: 1rem;
+
+      .numero:before {
+        counter-increment: compteurQuestion;
+        content: counter(compteurQuestion)".";
+        margin-right: .3em;
+        margin-left: 1rem;
+      }
+      h2 {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
   }
 
   .reponses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     list-style: none;
+    padding: 2rem 3.5rem 1rem 1.5rem;
 
     .choix {
       display: flex;
+      align-items: center;
       cursor: pointer;
 
       input[type=radio] {
@@ -40,13 +104,25 @@ nav ul {
         position: absolute;
 
         &:checked + .symbol {
-          color: red;
+          color: $jaune;
         }
       }
 
       .symbol {
-        width: 1rem;
-        margin-right: 1rem;
+        width: 3rem;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        font-family: Andalemono;
+        font-size: 1.5rem;
+
+        &.◆, &.● {
+          font-size: 2rem;
+        }
+      }
+
+      .reponse {
+        font-size: 0.85rem;
       }
     }
   }
