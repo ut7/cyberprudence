@@ -13,4 +13,4 @@ Diffusion des images et du texte autorisée [sans modification et sans but comme
 
 ## Déploiement
 
-./publish_to_ghpages.sh
+avec github action \o/
