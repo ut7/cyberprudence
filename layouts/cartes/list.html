@@ -1,56 +1,70 @@
 {{ define "main" }}
-  <section class="couverture">
+  <section class="couverture bg-bleu">
     <h1>Permis de cyberprudence</h1>
     <p>Pour être plus en sécurité sur Internet</p>
   </section>
-  <ol>
-  {{ range .Pages }}
-    <li>
-      <section class="carte">
-        <div class="question">
-          <div class="image">
-            {{ with resources.GetMatch .Params.Image }}
-              <img src="{{ .RelPermalink }}">
+  <section class="questions bg-bleu">
+    <ol>
+    {{ range .Pages }}
+      <li>
+        <div class="carte">
+          <div class="question">
+            <div class="image">
+              {{ with resources.GetMatch .Params.Image }}
+                <img src="{{ .RelPermalink }}">
+              {{ end }}
+            </div>
+            <div class="titre">
+                <div class="numero"></div>
+                <h2>{{ .Params.Question }}</h2>
+            </div>
+          </div>
+          <ul class="reponses">
+            {{ $symboles := .Params.Symboles }}
+            {{ $page := .Params.Id }}
+            {{ range $i, $reponse := .Params.reponses }}
+            <li>
+              {{ $value := printf "carte_%s_reponse_%s" $page $i}}
+              <label class="choix">
+                <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
+                <div class="symbole {{ index $symboles $i }}"><span>{{ index $symboles $i }}</span></div>
+                <div class="reponse">{{ $reponse | markdownify }}</div>
+              </label>
+            </li>
             {{ end }}
-          </div>
-          <div class="titre">
-              <div class="numero"></div>
-              <h2>{{ .Params.Question }}</h2>
-          </div>
+          </ul>
         </div>
-        <ul class="reponses">
-          {{ $symboles := .Params.Symboles }}
-          {{ $page := .Params.Id }}
-          {{ range $i, $reponse := .Params.reponses }}
-          <li>
-            {{ $value := printf "carte_%s_reponse_%s" $page $i}}
-            <label class="choix">
-              <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
-              <div class="symbol {{ index $symboles $i }}"><span>{{ index $symboles $i }}</span></div>
-              <div class="reponse">{{ $reponse | markdownify }}</div>
-            </label>
-          </li>
-          {{ end }}
+      </li>
+    {{ end }}
+    </ol>
+  </section>
+  <section class="resultats">
+    <div class="titre bg-bleu">
+      <h2>{{ .Params.TitreResultat }}</h2>
+      <div class="mes-resultats">
+        <ul>
+        {{ range .Params.Symboles }}
+          <li><span id="nombre_{{ . }}" class="nombre-reponse"></span><span class="symbole {{ . }}">{{ . }}</span></li>
+        {{ end }}
         </ul>
-      </section>
-    </li>
-  {{ end }}
-  </ol>
-  <h2>Resultat</h2>
-  <p>Triangles : <span id="nombre_▲"></span></p>
-  <p>Carrés : <span id="nombre_■"></span></p>
-  <p>Losanges : <span id="nombre_◆"></span></p>
-  <p>ronds : <span id="nombre_●"></span></p>
+      </div>
+    </div>
+    {{ range .Params.Resultats }}
+      {{ partial "resultat" . }}
+    {{ end }}
+  </section>
   <script>
+    function calcule_reponse() {
+      for(const symbole of ["▲", "■", "◆", "●"]) {
+        const count = document.querySelectorAll("input[type=radio]:checked + ." + symbole).length;
+        document.getElementById("nombre_" + symbole).textContent = count;
+      }
+    }
     window.addEventListener("load", function(){
       document.querySelectorAll("input[type=radio]").forEach((element) => {
-        element.addEventListener("change", () => {
-          for(const symbole of ["▲", "■", "◆", "●"]) {
-            const count = document.querySelectorAll("input[type=radio]:checked + ." + symbole).length;
-            document.getElementById("nombre_" + symbole).textContent = count;
-          }
-        });
+        element.addEventListener("change", calcule_reponse);
       })
-     });
+    });
+    calcule_reponse();
   </script>
 {{ end }}

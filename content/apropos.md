@@ -1,5 +1,5 @@
 ---
-title: About
+title: À propos
 ---
 Auteures : Dominique de Saint Mars et Socheata Sim, en collaboration avec Bertrand Lionet.
 
