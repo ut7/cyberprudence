@@ -1,4 +1,4 @@
 baseURL = 'https://cyberprudence.ut7.fr/'
 languageCode = 'fr-fr'
-title = 'Pour être plus en sécurité sur Internet'
+title = 'Permis de cyberprudence'
 disableKinds = ['taxonomy']
