@@ -1,4 +1,4 @@
-baseURL = 'https://ut7.github.io/cyberprudence/'
+baseURL = 'https://cyberprudence.ut7.fr/'
 languageCode = 'fr-fr'
 title = 'Pour être plus en sécurité sur Internet'
 disableKinds = ['taxonomy']
