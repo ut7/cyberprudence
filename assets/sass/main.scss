@@ -5,6 +5,7 @@ $bleu: #243887;
 body {
   margin: 0;
   padding: 0;
+  font-family: Lato;
 }
 
 section {
@@ -12,7 +13,6 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 1rem 3rem;
-  font-family: Lato;
 }
 
 .bg-bleu {
@@ -46,8 +46,8 @@ nav ul {
   display: flex;
   gap: 1rem;
   list-style: none;
-  padding: 3px 5px;
-  background: #111;
+  padding: 1rem;
+  margin: 0;
 
   a {
     color: #fff;
@@ -68,10 +68,19 @@ nav ul {
     font-family: Terminal-grotesque;
     text-transform: uppercase;
     color: white;
+    font-size: 2rem;
+    margin: 2rem 0 0 0;
   }
-  p {
+  .sous-titre {
     font-family: VG5000;
+    font-size: 1.5rem;
     color: $jaune;
+    margin: 0 0 2rem 0;
+  }
+  .image.logo {
+    img {
+      width: 10rem;
+    }
   }
 }
 
