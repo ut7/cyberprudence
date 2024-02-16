@@ -7,33 +7,7 @@
     <ol>
     {{ range .Pages }}
       <li>
-        <div class="carte">
-          <div class="question">
-            <div class="image">
-              {{ with resources.GetMatch .Params.Image }}
-                <img src="{{ .RelPermalink }}">
-              {{ end }}
-            </div>
-            <div class="titre">
-                <div class="numero"></div>
-                <h2>{{ .Params.Question }}</h2>
-            </div>
-          </div>
-          <ul class="reponses">
-            {{ $symboles := .Params.Symboles }}
-            {{ $page := .Params.Id }}
-            {{ range $i, $reponse := .Params.reponses }}
-            <li>
-              {{ $value := printf "carte_%s_reponse_%s" $page $i}}
-              <label class="choix">
-                <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
-                <div class="symbole {{ index $symboles $i }}"><span>{{ index $symboles $i }}</span></div>
-                <div class="reponse">{{ $reponse | markdownify }}</div>
-              </label>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
+        {{ partial "carte" . }} 
       </li>
     {{ end }}
     </ol>
