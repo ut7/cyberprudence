@@ -3,10 +3,10 @@ id: 10
 question: Ton youtubeur préféré propose de gagner un super cadeau en participant à un concours ou challenge.
 image: images/800x800-009.png
 symboles:
-  - ▲
-  - ■
-  - ●
-  - ◆
+  - triangle
+  - carre
+  - rond
+  - losange
 reponses:
   - Tu as envie de participer mais tu hésites à demander l’autorisation à tes parents.
   - Tu fais le challenge avec tes copains, vous partagerez la récompense.

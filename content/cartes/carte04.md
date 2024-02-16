@@ -3,10 +3,10 @@ id: 4
 question: Si on te propose de gagner de l’argent en envoyant une photo de toi.
 image: images/800x800-003.png
 symboles:
-  - ▲
-  - ■
-  - ◆
-  - ●
+  - triangle
+  - carre
+  - losange
+  - rond
 reponses:
   - Ça dépend de combien on te propose et quel genre de photo…
   - Tu as envie d’envoyer la photo de quelqu’un que tu as trouvée sur Internet.

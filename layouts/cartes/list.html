@@ -18,7 +18,10 @@
       <div class="mes-resultats">
         <ul>
         {{ range .Params.Symboles }}
-          <li><span id="nombre_{{ . }}" class="nombre-reponse"></span><span class="symbole {{ . }}">{{ . }}</span></li>
+          <li>
+            <span id="nombre_{{ . }}" class="nombre-reponse"></span>
+            {{ partial "symbole" (dict "symbole" .) }} 
+          </li>
         {{ end }}
         </ul>
       </div>
@@ -29,7 +32,7 @@
   </section>
   <script>
     function calcule_reponse() {
-      for(const symbole of ["▲", "■", "◆", "●"]) {
+      for(const symbole of ['triangle', 'carre', 'losange', 'rond']) {
         const count = document.querySelectorAll("input[type=radio]:checked + ." + symbole).length;
         document.getElementById("nombre_" + symbole).textContent = count;
       }

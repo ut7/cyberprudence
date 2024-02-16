@@ -15,17 +15,31 @@ section {
   font-family: Lato;
 }
 
-.bg-blanc {
-  background-color: white;
-  color: $bleu
-}
-.bg-jaune {
-  background-color: $jaune;
-  color: $bleu
-}
 .bg-bleu {
   background-color: $bleu;
   color: white;
+
+  .symbole svg path {
+    fill: white;
+  }
+}
+
+.bg-jaune {
+  background-color: $jaune;
+  color: $bleu;
+
+  .symbole svg path {
+    fill: $bleu;
+  }
+}
+
+.bg-blanc {
+  background-color: white;
+  color: $bleu;
+
+  .symbole svg path {
+    fill: $bleu;
+  }
 }
 
 nav ul {
@@ -80,8 +94,6 @@ nav ul {
     max-width: 600px;
     border: 1rem solid white;
     border-radius: 1rem;
-    color: $bleu;
-    background-color: white;
     margin-top: 1rem;
 
     .question {
@@ -124,6 +136,7 @@ nav ul {
 
       .choix {
         display: flex;
+        gap: 1rem;
         align-items: center;
         cursor: pointer;
 
@@ -132,22 +145,18 @@ nav ul {
           position: absolute;
 
           &:checked + .symbole {
-            color: $jaune;
+            svg path {
+              fill: $jaune;
+            }
           }
         }
 
         .symbole {
-          width: 3rem;
-          flex-shrink: 0;
-          font-size: 1.5rem;
-
-          &.◆, &.● {
-            font-size: 2rem;
-          }
+          width: 1.5rem;
         }
 
         .reponse {
-          font-size: 0.85rem;
+          font-size: 1rem;
         }
       }
     }
@@ -180,15 +189,12 @@ nav ul {
           align-items: center;
           list-style-type: none;
           .nombre-reponse {
-            margin-right: 0.25rem;
+            margin-right: 0.5rem;
           }
           .symbole {
             display: inline;
-            font-size: 1rem;
-            line-height: 1;
-
-            &.◆, &.● {
-              font-size: 1.5rem;
+            svg {
+              width: 1rem;
             }
           }
         }
@@ -203,22 +209,18 @@ nav ul {
     .entete {
       display: flex;
       align-items: center;
+
       .symboles {
         display: flex;
         gap: 0.5rem;
         align-items: center;
-        flex-shrink: 0;
         width: 4rem;
         justify-content: end;
-
         .symbole {
-          font-size: 2.5rem;
-
-          &.◆, &.● {
-            font-size: 3rem;
-          }
+          width: 2rem;
         }
       }
+
       .texte {
         margin-left: 1rem;
         .categorie {

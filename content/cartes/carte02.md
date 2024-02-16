@@ -3,10 +3,10 @@ id: 2
 question: Sur Internet, un inconnu te demande si tu as déjà eu une relation amoureuse.
 image: images/800x800-001.png
 symboles:
-  - ▲
-  - ●
-  - ◆
-  - ■
+  - triangle
+  - rond
+  - losange
+  - carre
 reponses:
   - Tu lui dis que tu es trop jeune et tu lui demandes pourquoi il te pose la question.
   - C’est bizarre, tu bloques ou tu signales la personne.

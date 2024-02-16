@@ -1,4 +1,4 @@
-<div class="carte">
+<div class="carte bg-blanc">
     <div class="question">
         <div class="image">
             {{ with resources.GetMatch .Params.Image }}
@@ -16,9 +16,10 @@
         {{ range $i, $reponse := .Params.reponses }}
         <li>
             {{ $value := printf "carte_%s_reponse_%s" $page $i}}
+            {{ $symbole := index $symboles $i }}
             <label class="choix">
                 <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
-                <div class="symbole {{ index $symboles $i }}"><span>{{ index $symboles $i }}</span></div>
+                {{ partial "symbole" (dict "symbole" $symbole) }} 
                 <div class="reponse">{{ $reponse | markdownify }}</div>
             </label>
         </li>

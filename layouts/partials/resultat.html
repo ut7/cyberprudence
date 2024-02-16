@@ -2,7 +2,7 @@
     <div class="entete">
         <div class="symboles">
             {{ range .symboles }}
-            <div class="symbole {{.}}">{{ .}}</div>
+                {{ partial "symbole" (dict "symbole" .) }} 
             {{ end }}
         </div>
         <div class="texte">

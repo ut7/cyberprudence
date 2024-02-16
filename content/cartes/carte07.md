@@ -4,10 +4,10 @@ question: Tu lis un manga ou tu regardes un animé sur Internet et un contenu ch
 asterisque: Image violente, effrayante ou à caractère sexuel.
 image: images/800x800-006.png
 symboles:
-  - ▲
-  - ◆
-  - ●
-  - ■
+  - triangle
+  - losange
+  - rond
+  - carre
 reponses:
   - Tu cliques dessus par curiosité…
   - Tu fermes l’annonce et tu continues à lire ton manga ou à regarder ton animé, tu as l’habitude.
