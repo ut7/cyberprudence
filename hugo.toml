@@ -2,3 +2,6 @@ baseURL = 'https://cyberprudence.ut7.fr/'
 languageCode = 'fr-fr'
 title = 'Permis de cyberprudence'
 disableKinds = ['taxonomy']
+
+[markup.goldmark.renderer]
+unsafe= true

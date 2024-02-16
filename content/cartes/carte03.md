@@ -1,6 +1,7 @@
 ---
 id: 3
-question: Lors d’une partie sur ton jeu préféré, quelqu’un souhaite t’offrir des skins, des cadeaux* ou de l’argent virtuel.
+question: |
+  Lors d’une partie sur ton jeu préféré, quelqu’un souhaite t’offrir des skins, des cadeaux<sup>*</sup> ou de l’argent virtuel.
 asterisque: Une nouvelle tenue, de nouveaux accessoires ou des objets exclusifs pour ton personnage.
 image: images/800x800-002.png
 symboles:

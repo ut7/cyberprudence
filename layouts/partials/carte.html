@@ -7,7 +7,7 @@
         </div>
         <div class="titre">
             <div class="numero"></div>
-            <h2>{{ .Params.Question }}</h2>
+            <h2>{{ .Params.Question | markdownify }}</h2>
         </div>
     </div>
     <ul class="reponses">
@@ -25,4 +25,7 @@
         </li>
         {{ end }}
     </ul>
+    {{ if .Params.Asterisque }}
+    <div class="asterisque"><sup>*</sup>{{ .Params.Asterisque }}</div>
+    {{ end }}
 </div>
