@@ -10,22 +10,24 @@
             <h2>{{ .Params.Question | markdownify }}</h2>
         </div>
     </div>
-    <ul class="reponses">
-        {{ $symboles := .Params.Symboles }}
-        {{ $page := .Params.Id }}
-        {{ range $i, $reponse := .Params.reponses }}
-        <li>
-            {{ $value := printf "carte_%s_reponse_%s" $page $i}}
-            {{ $symbole := index $symboles $i }}
-            <label class="choix">
-                <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
-                {{ partial "symbole" (dict "symbole" $symbole) }} 
-                <div class="reponse">{{ $reponse | markdownify }}</div>
-            </label>
-        </li>
+    <div class="reponse">
+        <ul class="qcu">
+            {{ $symboles := .Params.Symboles }}
+            {{ $page := .Params.Id }}
+            {{ range $i, $reponse := .Params.reponses }}
+            <li>
+                {{ $value := printf "carte_%s_reponse_%s" $page $i}}
+                {{ $symbole := index $symboles $i }}
+                <label class="choix">
+                    <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
+                    {{ partial "symbole" (dict "symbole" $symbole "bg" "bg-blanc") }}
+                    <div class="text">{{ $reponse | markdownify }}</div>
+                </label>
+            </li>
+            {{ end }}
+        </ul>
+        {{ if .Params.Asterisque }}
+        <div class="asterisque"><sup>*</sup>{{ .Params.Asterisque }}</div>
         {{ end }}
-    </ul>
-    {{ if .Params.Asterisque }}
-    <div class="asterisque"><sup>*</sup>{{ .Params.Asterisque }}</div>
-    {{ end }}
+    </div>
 </div>

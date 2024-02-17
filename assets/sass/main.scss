@@ -19,7 +19,7 @@ section {
   background-color: $bleu;
   color: white;
 
-  .symbole svg path {
+  &.symbole svg path {
     fill: white;
   }
 
@@ -32,7 +32,7 @@ section {
   background-color: $jaune;
   color: $bleu;
 
-  .symbole svg path {
+  &.symbole svg path {
     fill: $bleu;
   }
 }
@@ -41,7 +41,7 @@ section {
   background-color: white;
   color: $bleu;
 
-  .symbole svg path {
+  &.symbole svg path {
     fill: $bleu;
   }
 }
@@ -103,8 +103,39 @@ nav ul {
     }
   }
 
+  @media (min-width: 1000px) {
+    .carte {
+      display: flex;
+      max-width: 1000px;
+      .question {
+        width: 450px;
+        flex-shrink: 0;
+
+        .image {
+          border-radius: 1rem 1rem 0 0;
+        }
+        .titre {
+          border-radius: 0 0 1rem 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .carte {
+      max-width: 600px;
+      .question {
+        .image {
+          border-radius: 1rem 1rem 0 0;
+        }
+        .titre {
+          border-radius: 0 0 1rem 1rem;
+        }
+      }
+    }
+  }
+  
   .carte {
-    max-width: 600px;
     border: 1rem solid white;
     border-radius: 1rem;
     margin-top: 1rem;
@@ -112,7 +143,6 @@ nav ul {
     .question {
       .image {
         display: flex;
-        border-radius: 1rem 1rem 0 0;
         overflow: hidden;
         img {
           width: 100%;
@@ -146,36 +176,41 @@ nav ul {
       margin: 0 2rem 0.75rem 4rem;
     }
 
-    .reponses {
+    .reponse {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      list-style: none;
-      padding: 2rem 3.5rem 1rem 1.5rem;
-
-      .choix {
+      justify-content: space-between;
+      .qcu {
         display: flex;
+        flex-direction: column;
         gap: 1rem;
-        align-items: center;
-        cursor: pointer;
+        list-style: none;
+        padding: 2rem 3.5rem 1rem 1.5rem;
 
-        input[type=radio] {
-          appearance: none;
-          position: absolute;
+        .choix {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          cursor: pointer;
 
-          &:checked + .symbole {
-            svg path {
-              fill: $jaune;
+          input[type=radio] {
+            appearance: none;
+            position: absolute;
+
+            &:checked + .symbole {
+              svg path {
+                fill: $jaune;
+              }
             }
           }
-        }
 
-        .symbole {
-          width: 1.5rem;
-        }
+          .symbole {
+            width: 1.5rem;
+          }
 
-        .reponse {
-          font-size: 1rem;
+          .texte {
+            font-size: 1rem;
+          }
         }
       }
     }

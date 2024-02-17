@@ -1,4 +1,4 @@
 {{ $chemin_symbole := printf "%s.svg" .symbole }}
-<div class="symbole {{ .symbole }}">
+<div class="{{ .bg }} symbole {{ .symbole }}">
     {{ partial $chemin_symbole . }} 
 </div>

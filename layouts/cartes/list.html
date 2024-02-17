@@ -17,7 +17,7 @@
     {{ end }}
     </ol>
   </section>
-  <section class="resultats">
+  <section class="resultats bg-blanc">
     <div class="titre bg-bleu">
       <h2>{{ .Params.TitreResultat }}</h2>
       <div class="mes-resultats">
@@ -25,7 +25,7 @@
         {{ range .Params.Symboles }}
           <li>
             <span id="nombre_{{ . }}" class="nombre-reponse"></span>
-            {{ partial "symbole" (dict "symbole" .) }} 
+            {{ partial "symbole" (dict "symbole" . "bg" "bg-bleu") }} 
           </li>
         {{ end }}
         </ul>

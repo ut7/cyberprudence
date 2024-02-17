@@ -1,8 +1,9 @@
-<div class="resultat bg-{{ .couleur }}">
+{{ $bg := printf "bg-%s" .couleur }}
+<div class="resultat {{ $bg }}">
     <div class="entete">
         <div class="symboles">
             {{ range .symboles }}
-                {{ partial "symbole" (dict "symbole" .) }} 
+                {{ partial "symbole" (dict "symbole" . "bg" $bg) }}
             {{ end }}
         </div>
         <div class="texte">
