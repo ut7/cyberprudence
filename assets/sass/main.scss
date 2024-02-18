@@ -107,15 +107,17 @@ nav ul {
     .carte {
       display: flex;
       max-width: 1000px;
-      .question {
+      .illustration {
         width: 450px;
         flex-shrink: 0;
 
         .image {
-          border-radius: 1rem 1rem 0 0;
+          border-radius: 1rem 0 0 1rem;
         }
+      }
+      .qcu {
         .titre {
-          border-radius: 0 0 1rem 1rem;
+          border-radius: 0 1rem 0 0;
         }
       }
     }
@@ -124,12 +126,9 @@ nav ul {
   @media (max-width: 1000px) {
     .carte {
       max-width: 600px;
-      .question {
+      .illustration {
         .image {
           border-radius: 1rem 1rem 0 0;
-        }
-        .titre {
-          border-radius: 0 0 1rem 1rem;
         }
       }
     }
@@ -140,7 +139,7 @@ nav ul {
     border-radius: 1rem;
     margin-top: 1rem;
 
-    .question {
+    .illustration {
       .image {
         display: flex;
         overflow: hidden;
@@ -148,6 +147,18 @@ nav ul {
           width: 100%;
         }
       }
+    }
+
+    .asterisque {
+      font-size: 0.85rem;
+      font-style: italic;
+      margin: 0 2rem 0.75rem 4rem;
+    }
+
+    .qcu {
+      display: flex;
+      flex-direction: column;
+
       .titre {
         display: flex;
         flex-direction: row;
@@ -168,19 +179,8 @@ nav ul {
           font-weight: normal;
         }
       }
-    }
 
-    .asterisque {
-      font-size: 0.85rem;
-      font-style: italic;
-      margin: 0 2rem 0.75rem 4rem;
-    }
-
-    .reponse {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      .qcu {
+      .reponses {
         display: flex;
         flex-direction: column;
         gap: 1rem;

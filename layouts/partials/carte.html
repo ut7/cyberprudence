@@ -1,17 +1,17 @@
 <div class="carte bg-blanc">
-    <div class="question">
+    <div class="illustration">
         <div class="image">
             {{ with resources.GetMatch .Params.Image }}
             <img src="{{ .RelPermalink }}">
             {{ end }}
         </div>
+    </div>
+    <div class="qcu">
         <div class="titre">
             <div class="numero"></div>
             <h2>{{ .Params.Question | markdownify }}</h2>
         </div>
-    </div>
-    <div class="reponse">
-        <ul class="qcu">
+        <ul class="reponses">
             {{ $symboles := .Params.Symboles }}
             {{ $page := .Params.Id }}
             {{ range $i, $reponse := .Params.reponses }}
