@@ -4,7 +4,7 @@
  {{ partial "meta.html" . }}
 </head>
 
-<body class="bg-bleu">
+<body class="{{ .Params.Bodyclass }}">
  {{ partial "nav.html" }}
  {{ block "main" . }}
  {{ end }}

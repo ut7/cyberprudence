@@ -1,5 +1,6 @@
 ---
 title: À propos
+bodyClass: bg-bleu
 ---
 Auteures : Dominique de Saint Mars et Socheata Sim, en collaboration avec Bertrand Lionet.
 

@@ -1,6 +1,9 @@
 @import 'fonts.scss';
+
 $jaune: #FCBE00;
 $bleu: #243887;
+
+@import 'memo.scss';
 
 body {
   margin: 0;
@@ -46,24 +49,28 @@ section {
   }
 }
 
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 1rem;
-  margin: 0;
+nav {
+  // max-width: 800px;
+  // margin: 0 auto;
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
 
-  a {
-    color: #fff;
-    text-decoration: none;
+    a {
+      color: #fff;
+      text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
 
-  li {
-    display: inline;
+    li {
+      display: inline;
+    }
   }
 }
 

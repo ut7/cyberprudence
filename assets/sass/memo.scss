@@ -1,0 +1,39 @@
+.memo {
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    h1 {
+        background-color: $jaune;
+        color: $bleu;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    ol {
+        column-count: 2;
+        column-width: 350px;
+        counter-reset: compteurMemo;
+
+        li {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            break-inside: avoid;
+            margin-top: 2rem;
+
+            &:before {
+                counter-increment: compteurMemo;
+                content: counter(compteurMemo);
+                margin-right: .3em;
+                margin-left: 1rem;
+                font-family: VG5000;
+                font-size: 2rem;
+                border-right: 2px solid $bleu;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
