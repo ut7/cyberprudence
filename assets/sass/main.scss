@@ -2,6 +2,7 @@
 
 $jaune: #FCBE00;
 $bleu: #243887;
+$largeur: 1000px;
 
 @import 'memo.scss';
 
@@ -50,8 +51,8 @@ section {
 }
 
 nav {
-  // max-width: 800px;
-  // margin: 0 auto;
+  max-width: $largeur;
+  margin: 0 auto;
   ul {
     display: flex;
     gap: 1rem;

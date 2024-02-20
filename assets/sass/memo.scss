@@ -1,5 +1,5 @@
 .memo {
-    max-width: 800px;
+    max-width: $largeur;
     padding: 0;
     margin: 0 auto;
     h1 {
@@ -14,8 +14,10 @@
 
     ol {
         column-count: 2;
-        column-width: 350px;
+        column-width: 440px;
         counter-reset: compteurMemo;
+        padding: 0 2.5rem;
+        gap: 2rem;
 
         li {
             display: flex;
@@ -27,12 +29,11 @@
             &:before {
                 counter-increment: compteurMemo;
                 content: counter(compteurMemo);
-                margin-right: .3em;
-                margin-left: 1rem;
+                margin-right: .5em;
                 font-family: VG5000;
                 font-size: 2rem;
                 border-right: 2px solid $bleu;
-                padding-right: 0.5rem;
+                padding-right: 0.3rem;
             }
         }
     }

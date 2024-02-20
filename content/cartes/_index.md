@@ -1,5 +1,6 @@
 ---
 title: Permis de cyberprudence
+bodyClass: bg-bleu
 titreResultat: Découvre tes résultats !
 symboles:
   - triangle
