@@ -3,6 +3,7 @@
 $jaune: #FCBE00;
 $bleu: #243887;
 $largeur: 1000px;
+$petite-largeur: 600px;
 
 @import 'memo.scss';
 
@@ -228,7 +229,7 @@ nav {
 .resultats {
   .titre {
     width: 100%;
-    max-width: 600px;
+    max-width: $petite-largeur;
     padding: 0 3rem;
 
     h2 {
@@ -265,7 +266,8 @@ nav {
   }
 
   .resultat {
-    max-width: 600px;
+    max-width: $petite-largeur;
+    width: 100%;
     padding: 1.5rem 3rem;
 
     .entete {
