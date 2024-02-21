@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="{{ .Params.Class }}">
+  {{ .Content }}
+  <ol>
+    {{ range .Params.Memos  }}
+      <li>
+          <p>{{ . | markdownify }}</p>
+      </li>
+    {{ end }}
+  </ol>
+</section>
+{{ end }}
