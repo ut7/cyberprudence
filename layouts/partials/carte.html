@@ -21,7 +21,7 @@
                 <label class="choix">
                     <input type="radio" id="{{ $value }}" name="carte{{ $page }}" value="{{ $value }}" />
                     {{ partial "symbole" (dict "symbole" $symbole "bg" "bg-blanc") }}
-                    <div class="text">{{ $reponse | markdownify }}</div>
+                    <div class="texte">{{ $reponse | markdownify }}</div>
                 </label>
             </li>
             {{ end }}
