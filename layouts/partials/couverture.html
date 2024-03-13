@@ -1,11 +1,5 @@
 <section class="couverture bg-bleu">
     <h1>Permis de cyberprudence</h1>
     <div class="sous-titre">Pour être plus en sécurité sur Internet</div>
-    <div class="image logo">
-        {{ with resources.GetMatch "images/800x-logo-blanc.png" }}
-        <a href="www.cameleon-association.org">
-            <img src="{{ .RelPermalink }}" alt="logo associatioin Caméléon">
-        </a>
-        {{ end }}
-    </div>
+    {{ partial "logo" }}
 </section>

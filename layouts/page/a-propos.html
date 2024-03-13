@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="{{ .Params.Class }}">
+  {{ .Content }}
+  <div class="social">
+    {{ range .Params.socials }}
+        {{ $chemin_logo := printf "%s.svg" .nom }}
+        <a href="{{ .url }}">
+            {{ partial $chemin_logo }}
+        </a>
+    {{ end }}
+  </div>
+  {{ .Params.droits | markdownify }}
+  {{ partial "logo" }}
+</section>
+{{ end }}

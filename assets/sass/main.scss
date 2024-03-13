@@ -15,7 +15,6 @@ body {
 
 .accueil {
   max-width: $largeur;
-  padding: 0 3rem;
   margin: 0 auto;
 }
 
@@ -402,6 +401,36 @@ nav {
       p {
         margin: 0;
       }
+    }
+  }
+}
+
+.a-propos {
+  max-width: $petite-largeur;
+  padding: 0 3rem;
+  margin: 0 auto; 
+  text-align: center;
+
+  .social {
+    margin: 2rem 0 4rem;
+    a {
+      text-decoration: none;
+    }
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .image.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    img {
+      width: 20rem;
     }
   }
 }
