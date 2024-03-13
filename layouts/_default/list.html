@@ -1,5 +1,14 @@
 {{ define "main" }}
+<section class="{{ .Params.Class }}">
+  {{ .Content }}
+</section>
 <section class="bg-bleu">
-    {{ .Content }}
+    <ol>
+    {{ range .Pages }}
+        <li>
+        {{ . }}
+        </li>
+    {{ end }}
+    </ol>
 </section>
 {{ end }}

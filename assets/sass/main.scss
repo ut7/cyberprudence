@@ -13,6 +13,38 @@ body {
   font-family: Lato;
 }
 
+.accueil {
+  max-width: $largeur;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.auteurs {
+  max-width: $petite-largeur;
+  margin: 0 auto;
+  text-align: justify;
+
+  h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+    width: fit-content;
+    padding: 0.2rem 0.3rem;
+  }
+
+  a {
+    color: $bleu
+  }
+
+  .auteur-0 h2 {
+    background-color: $bleu;
+  }
+
+  .auteur-1 h2 {
+    background-color: $jaune;
+  }
+}
+
 section {
   display: flex;
   flex-direction: column;

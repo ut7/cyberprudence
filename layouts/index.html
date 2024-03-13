@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="{{ .Params.Class }}">
+    {{ partial "couverture" }}
+    <section class="auteurs">
+      {{ .Content }}
+      {{ range $i, $auteur := .Params.auteurs  }}
+        <div class="auteur-{{ math.Mod $i 2 }}">
+          {{ $auteur | markdownify }}
+        </div>
+      {{ end }}
+    </section>
+  </div>
+{{ end }}

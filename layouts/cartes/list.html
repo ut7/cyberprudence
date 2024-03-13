@@ -1,13 +1,5 @@
 {{ define "main" }}
-  <section class="couverture bg-bleu">
-    <h1>Permis de cyberprudence</h1>
-    <div class="sous-titre">Pour être plus en sécurité sur Internet</div>
-    <div class="image logo">
-      {{ with resources.GetMatch "images/800x-logo-blanc.png" }}
-        <img src="{{ .RelPermalink }}">
-      {{ end }}
-    </div>
-  </section>
+  {{ partial "couverture" }}
   <section class="questions bg-bleu">
     <ol>
     {{ range .Pages }}
