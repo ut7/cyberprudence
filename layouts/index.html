@@ -9,5 +9,46 @@
         </div>
       {{ end }}
     </section>
+    <section class="passe-ton-permis">
+      <div class="bg-bleu conteneur-titre">
+        <h2 class="bg-jaune"><strong>PASSE TON PERMIS DE</strong><br>- CYBERPRUDENCE -</h2>
+      </div>
+      <div class="bg-blanc conteneur-intro">
+        {{ partial "symbole" (dict "symbole" "internet") }} 
+        <p>
+          Internet c’est super pour s’informer et se connecter aux autres.
+          Regarder des vidéos et jouer en réseau font partie des activités
+          préférées des enfants et des adolescents.
+        </p>
+        <p>
+          Mais il arrive que des gens essaient de piéger les jeunes derrière leur
+          écran pour les isoler, les agresser et leur faire du mal. Ils peuvent
+          mentir sur leur identité en utilisant des applications ou des réseaux
+          sociaux pour entrer en contact avec eux.
+        </p>
+        {{ partial "symbole" (dict "symbole" "smartphone") }} 
+      </div>
+      <div class="bg-bleu conteneur-envoie">
+        <div class="bg-jaune">
+          <p>
+            Dans la vraie vie comme sur Internet, il y a des règles de sécurité à
+            connaître pour se protéger des dangers qui existent.
+          </p>
+          <p>
+            Passe ton permis de cyberprudence en répondant à ce quiz. Sauras-tu
+            reconnaître et éviter les situations à risques ?
+          </p>
+          <p>
+            Découvre ton résultat à la fin !
+          </p>
+          <div class="actions">
+            <a href="cartes">Passe ton permis en ligne</a>
+            {{ with resources.GetMatch "pdf/Permis_cyberprudence_CAMELEON.pdf" }}
+              <a href="{{ .RelPermalink }}">Télécharge la brochure PDF</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 {{ end }}
