@@ -4,7 +4,7 @@
   <div class="social">
     {{ range .Params.socials }}
         {{ $chemin_logo := printf "%s.svg" .nom }}
-        <a href="{{ .url }}">
+        <a href="{{ .url }}" target="_blank">
             {{ partial $chemin_logo }}
         </a>
     {{ end }}
