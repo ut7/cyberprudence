@@ -39,18 +39,21 @@
         &.internet {
           justify-content: flex-start;
           margin-left: 1rem;
+          svg {
+            width: 3rem;
+            height: 3rem;
+          }
         }
         &.smartphone {
           justify-content: flex-end;
           margin-right: 3rem;
-        }
-        svg {
-          width: 3rem;
-          height: 3rem;
-        
-          path {
-            fill: $bleu;
+          svg {
+            width: 4rem;
+            height: 4rem;
           }
+        }
+        svg path {
+          fill: $bleu;
         }
       }
     }
