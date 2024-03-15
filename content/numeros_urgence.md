@@ -5,7 +5,7 @@ bodyClass: bg-blanc
 class: numeros-urgence
 numéros:
     -
-        numéro: Le 119
+        numéro: 119
         rôle: |
             Pour les enfants en danger  
             ou victimes de violences.
@@ -14,7 +14,7 @@ numéros:
             accessibles en ligne sur le site internet  
             https://www.allo119.gouv.fr/besoin-daide
     -
-        numéro: Le 3018
+        numéro: 3018
         rôle: |
             En cas de harcèlement  
             ou de cyberviolences.

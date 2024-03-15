@@ -5,7 +5,7 @@
     <ul class="numeros">
         {{ range .Params.Numéros }}
             <li class="bg-jaune">
-                <h2>{{ .numéro }}</h2>
+                <a href="tel:{{ .numéro }}"><h2>Le {{ .numéro }}</h2></a>
                 <div class="role">{{ .rôle | markdownify }}</div>
                 <div class="description">{{ .description | markdownify }}</div>
             </li>
