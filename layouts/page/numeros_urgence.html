@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="{{ .Params.Class }}">
+    <h1>Numeros d'urgence !<span class="smartphone">{{ partial "smartphone.svg" }}</span></h1>
+    {{ .Content }}
+    <ul class="numeros">
+        {{ range .Params.Numéros }}
+            <li class="bg-jaune">
+                <h2>{{ .numéro }}</h2>
+                <div class="role">{{ .rôle | markdownify }}</div>
+                <div class="description">{{ .description | markdownify }}</div>
+            </li>
+        {{ end }}
+    </ul>
+    <div class="incitation bg-bleu"><p>{{ .Params.Incitation | markdownify }}</p></div>
+    <div class="ampoule">{{ partial "ampoule.svg" }}</div>
+    <h1>Tu as des droits !</h1>
+    <div class="sous-titre bg-jaune">Que dit la loi ?</div>
+    <div class="loi bg-bleu">{{ .Params.Loi | markdownify }}</div>
+</section>
+{{ end }}

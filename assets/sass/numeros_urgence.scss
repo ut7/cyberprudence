@@ -1,0 +1,101 @@
+.numeros-urgence {
+    max-width: $largeur;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1.3rem;
+    position: relative;
+    margin-top: 1rem;
+
+    h1 {
+        font-family: VG5000;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 0;
+    }
+    p {
+        padding: 0 5rem;
+    }
+
+    .smartphone {
+        svg {
+            vertical-align: middle;
+            width: 3.5rem;
+            height: 3.5rem;
+            path {
+                fill: $bleu;
+            }
+        }
+    }
+
+    .numeros {
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 0.3rem;
+
+        li {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 49%;
+            padding: 3rem;
+            text-align: center;
+
+            h2 {
+                font-size: 2.5rem;
+                color: white;
+                margin: 0;
+            }
+            .role {
+                margin-top: 1rem;
+                font-weight: bold;
+                color: white;
+            }
+            .description {
+                margin-top: 1rem;
+                font-style: italic;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .incitation, .loi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .incitation {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .ampoule {
+        margin-top: 2rem;
+        svg {
+            width: 4rem;
+            height: 4rem;
+            transform: rotate(-15deg);
+            path {
+                fill: $bleu;
+            }
+        }
+    }
+
+    .sous-titre {
+        text-transform: uppercase;
+        color: white;
+        padding: 0.2rem 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .loi {
+        margin-top: 3rem;
+        padding: 1rem 0;
+    }
+}
