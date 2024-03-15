@@ -1,4 +1,4 @@
-# Permis de prudence
+# Permis de cyber-prudence
 
 Pour être plus en sécurité sur Internet
 
