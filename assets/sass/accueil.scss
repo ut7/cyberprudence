@@ -25,6 +25,10 @@
   }
 
   .passe-ton-permis {
+    a {
+      text-decoration: none;
+    }
+
     .conteneur-titre {
       max-width: $petite-largeur;
       padding-top: 2rem;

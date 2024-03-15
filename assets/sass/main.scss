@@ -54,13 +54,12 @@ section {
   }
 }
 
-nav {
+nav, footer {
   max-width: $largeur;
   margin: 0 auto;
   ul {
     display: flex;
     gap: 1rem;
-    list-style: none;
     padding: 1rem;
     margin: 0;
 
@@ -77,6 +76,13 @@ nav {
       display: inline;
     }
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px white;
+  margin-top: 1rem;
 }
 
 .couverture {
