@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="{{ .Params.Class }}">
+  {{ .Content }}
+  <ul class="situations">
+    {{ range .Params.Situations }}
+        <li>
+            <p><strong>{{ .question }}</strong></p>
+            {{ partial "fleche.svg" }}
+            {{ .reponse | markdownify }}
+        </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
