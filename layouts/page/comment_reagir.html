@@ -1,5 +1,6 @@
 {{ define "main" }}
 <section class="{{ .Params.Class }}">
+  <span class="ordinateur">{{ partial "ordinateur.svg" }}</span>
   {{ .Content }}
   <ul class="situations">
     {{ range .Params.Situations }}
@@ -10,5 +11,6 @@
         </li>
     {{ end }}
   </ul>
+  <span class="bulles">{{ partial "bulles.svg" }}</span>
 </section>
 {{ end }}
