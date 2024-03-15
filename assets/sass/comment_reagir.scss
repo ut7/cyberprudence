@@ -36,8 +36,8 @@
     }
     .ordinateur {
         svg {
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
             path {
                 fill: $bleu;
             }
@@ -46,7 +46,7 @@
     @media (min-width: 690px) {
         .ordinateur {
             position: absolute;
-            left: 5rem;
+            left: 7rem;
             transform: rotate(-15deg);
         }
     }
