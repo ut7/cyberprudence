@@ -2,7 +2,7 @@
 
 $jaune: #FCBE00;
 $bleu: #243887;
-$largeur: 1000px;
+$largeur: 800px;
 $petite-largeur: 600px;
 
 
@@ -20,7 +20,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  section {
+    padding: 1rem 3rem;
+  }
 }
 
 .bg-bleu {

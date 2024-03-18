@@ -35,7 +35,7 @@
 
   @media (max-width: 1000px) {
     .carte {
-      max-width: 600px;
+      max-width: $petite-largeur;
       .illustration {
         .image {
           border-radius: 1rem 1rem 0 0;
@@ -193,16 +193,18 @@
         .categorie {
           text-transform: uppercase;
           font-weight: bold;
-        }
-        h3 {
-          font-size: 1rem;
           margin: 0;
+        }
+        .titre {
+          font-size: 1rem;
+          padding: 0;
+          font-size: 1.3rem;
         }
       }
     }
     .description {
       margin-top: 1rem;
-      font-size: 0.85rem;
+      font-size: 1rem;
       text-align: justify;
 
       p {
