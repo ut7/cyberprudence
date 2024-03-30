@@ -1,0 +1,23 @@
+/* TEAM */
+  Text author: Dominique de Saint Mars
+  Site: https://dominiquedesaintmarsmaxetlili.wordpress.com/
+
+  Text author: Socheata Sim
+
+  Psychologist: Bertrand Lionet des services de pédiatrie et de pédopsychiatrie du Centre Hospitalier de Dunkerque
+
+  Illustrator: Chaïma Metatla
+  Site: @chai.mtl
+
+  Graphic design: Association Caméléon
+  Site: www.cameleon-association.org
+
+  Developer: Étienne Charignon
+  Mastodon: https://mastodon.social/@echar
+  Site: https://ut7.fr
+
+/* SITE */
+  Last update: 2024/03
+  Doctype: HTML5
+  Language: French
+  IDE: vim, Gimp, Hugo
