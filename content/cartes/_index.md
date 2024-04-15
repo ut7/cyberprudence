@@ -1,5 +1,5 @@
 ---
-title: Permis de cyberprudence
+title: Passe le permis
 bodyClass: bg-bleu
 titreResultat: Découvre tes résultats !
 symboles:

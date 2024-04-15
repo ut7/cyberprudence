@@ -1,5 +1,5 @@
 ---
-title: tu te sens piégé(e) ?
+title: Comment réagir ?
 layout: comment_reagir
 bodyClass: bg-blanc
 class: comment-reagir
